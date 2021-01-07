@@ -33,9 +33,7 @@ namespace SsdWebApi
             .AllowAnyMethod()
             .AllowAnyHeader());
             });
-
-            services.AddDbContext<StagioneContext>(options => options.UseSqlite("Data Source=testDB.sqlite"));
-            services.AddDbContext<FinIndiciContext>(options =>options.UseSqlite("Data Source=finindices.sqlite"));
+            services.AddDbContext<FinIndiceContext>(options =>options.UseSqlite("Data Source=finindices.sqlite"));
             services.AddControllers();
 
            

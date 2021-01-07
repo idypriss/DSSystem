@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zB873eqLsqpXDpuALGoNiMkz0bnmKJpAyXXTwWBwCpguj+IoH7hfbjU/lOv041SNcF0uvrsywHZj/ZcfnNm/pA==",
+  "dgSpecHash": "rXyOTIbBc8l1Rc3e8AbQoNCQNtwQnZtGCGpYs9A6xsXu8BCGtXtSba5a4oRjEfahXkbeZif8KpIbbzKpSG9HIA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Hp\\Desktop\\progettoSupp\\ilMioProgetto\\SsdWebApi\\SsdWebApi.csproj",
+  "projectFilePath": "C:\\Users\\Hp\\Desktop\\DSSystem\\ilMioProgetto\\SsdWebApi\\SsdWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hp\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\Hp\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

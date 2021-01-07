@@ -4,19 +4,18 @@ using System.Collections.Generic;
 using SsdWebApi.Models;
 using Microsoft.EntityFrameworkCore;
 using System.IO;
- 
+
 namespace SsdWebApi {
-    public class IndiciPersistence {
+    public class IndiciPersistence  {
     
-        private  readonly  FinIndiciContext _context;
-        public IndiciPersistence ( FinIndiciContext context ) {
- 
+        private  readonly  FinIndiceContext _context;
+        public IndiciPersistence ( FinIndiceContext context ) {
+
             _context = context;
            
         }
-            public List<string> readIndex(string attribute){
- 
-                List<string> serie = new List<string>();
+        public List<string> readIndex(string attribute) {
+            List<string> serie = new List<string>();
 
             StreamWriter fout = new StreamWriter(attribute+".csv", false);
 
@@ -40,5 +39,12 @@ namespace SsdWebApi {
             return serie;
         }
         
+        
     }
 }
+
+
+
+
+
+    

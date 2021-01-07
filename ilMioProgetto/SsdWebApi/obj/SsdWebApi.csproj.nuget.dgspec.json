@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hp\\Desktop\\progettoSupp\\ilMioProgetto\\SsdWebApi\\SsdWebApi.csproj": {}
+    "C:\\Users\\Hp\\Desktop\\DSSystem\\ilMioProgetto\\SsdWebApi\\SsdWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hp\\Desktop\\progettoSupp\\ilMioProgetto\\SsdWebApi\\SsdWebApi.csproj": {
+    "C:\\Users\\Hp\\Desktop\\DSSystem\\ilMioProgetto\\SsdWebApi\\SsdWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\Desktop\\progettoSupp\\ilMioProgetto\\SsdWebApi\\SsdWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\Desktop\\DSSystem\\ilMioProgetto\\SsdWebApi\\SsdWebApi.csproj",
         "projectName": "SsdWebApi",
-        "projectPath": "C:\\Users\\Hp\\Desktop\\progettoSupp\\ilMioProgetto\\SsdWebApi\\SsdWebApi.csproj",
+        "projectPath": "C:\\Users\\Hp\\Desktop\\DSSystem\\ilMioProgetto\\SsdWebApi\\SsdWebApi.csproj",
         "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\Desktop\\progettoSupp\\ilMioProgetto\\SsdWebApi\\obj\\",
+        "outputPath": "C:\\Users\\Hp\\Desktop\\DSSystem\\ilMioProgetto\\SsdWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",

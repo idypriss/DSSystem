@@ -45,8 +45,9 @@ public class PythonRunner
          {
             // Separated FileName and Arguments
             FileName = "cmd.exe",
-            Arguments = $"/c c:/ProgramData/Anaconda3/condabin/conda.bat activate {Environment}&&python {strCommand}",
-            UseShellExecute = false, 
+             Arguments = $"/c C:/Users/Hp/anaconda3/condabin/conda.bat activate {Environment}&&python {strCommand}",
+             //Arguments = $"/c c:/ProgramData/Anaconda3/condabin/conda.bat activate {Environment}&&python {strCommand}",
+             UseShellExecute = false, 
             CreateNoWindow = false,
             ErrorDialog = false,
             RedirectStandardError = true,
@@ -99,6 +100,7 @@ public class PythonRunner
             process.WaitForExit();
          }
          // here no more process
+         // Console.WriteLine("python runner result"+res);
          return res;
       }    
 
