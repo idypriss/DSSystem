@@ -1,0 +1,17 @@
+{
+"horizon"       : 24,
+"S&P_500_INDEX" : 0.05000267 ,
+"FTSE_MIB_INDEX":  0.05000267,
+"GOLD_SPOT_$_OZ": 0.69991947,
+"MSCI_EM"       : 0.05000464,
+"MSCI_EURO"     :0.05000156,
+"All_Bonds_TR"  : 0.05006341,
+"U.S._Treasury" :  0.05000558,
+"Total":1
+}
+
+
+ritorno atteso: 94945.5003004882
+standard deviation: 70.74719157690777
+
+
