@@ -37,8 +37,8 @@ def compute_fitness(xvec, capital_value, horizon, forcastValues):
            
     for i in range(19, horizon):
     #media della la somma delle ultime valori dei 20 ultimi giorni  valore del portafoglio finale
-       media20giorni[i]= rendimento[i] = sum(valorePortafoglio[i-19:i]) / 20
-       squareError[i] = valorePortafoglio[i] - rendimento[i]
+       media20giorni[i]= rendimento[i] = sum(valorePortafoglio[i-19:i]) / 20#return
+       squareError[i] = valorePortafoglio[i] - rendimento[i]#deviation o error
        
       # squareError[i] = (valorePortafoglio[i] - rendimento[i])*(valorePortafoglio[i] - rendimento[i])
        count=(horizon - 20)

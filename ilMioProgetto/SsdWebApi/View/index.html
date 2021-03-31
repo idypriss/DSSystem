@@ -4,27 +4,45 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Decision Support System Client</title>
+    <title>Decision Support System </title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="client.js"> 
-     import { findAll } from './client.js';
-     import { findById } from './client.js';
-     import { updateId } from './client.js';
-     import { deleteId } from './client.js';
-     //import { getIndexById } from './client.js';
-    </script>
+    <script src="client.js"> </script>
+
+      <style>
+		body{
+		  background-color: rgb(248, 248, 248);	
+		}
+        .myDiv {
+          border: 5px ;
+          
+          text-align: center;
+          padding: 15px;
+        }
+        .child_Div{
+          text-align: center;	
+          padding: 15px;
+        }
+		#charts{
+			margin: auto;
+  			width: 50%;
+  			padding: 10px;
+
+		}
+		
+        </style>
 </head>
 
 <body onload="init()">
-    <h1>Decision Support System Client</h1>
-<div>
-<textarea id="txtarea" rows="8" cols="50" readonly> </textarea>
+    <h2 class="child_Div" > FINANCIAL INDICE PREVISION </h2>
+<div class="child_Div">  
+<textarea id="txtarea" rows="12" cols="120" readonly> </textarea>
 </div>
 
-<label for="indices">Index:</label>
+<div class="child_Div"> 
+<label for="indices">Indices:</label>
 <select name="indices" id="indices">
-  <option value="complete">Full portfolio</option>
+  <option value="complete">select...</option>
   <option value="SP_500">SP_500</option>
   <option value="FTSE_MIB">FTSE_MIB</option>
   <option value="GOLD_SPOT">GOLD_SPOT</option>
@@ -33,11 +51,16 @@
   <option value="All_Bonds">All_Bonds</option>
   <option value="US_Treasury">US_Treasury</option>
 </select>
-<div>
-<input id="indexButton" type="button" value="Forecast" onclick="getIndexById();" />
+
+<div> 
+
+<div class="myDiv">
+	<input  id="indexButton" type="button" value="Forecasting by serie" onclick="findById();"/>
+	<input type="button" id="portafoglioButton" value="Generate portafoglio" onclick="portfoglio_asset();" />  
 </div>
-<div id="charts">
+<div id="charts" >
 </div>
+ 
 </body>
 
 </html>

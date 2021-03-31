@@ -22,7 +22,7 @@ namespace SsdWebApi
             
             try
             {
-                string command = $"Models/MainPortafoglio.py";
+                string command = $"Models/ForcastSerie.py";
                 string[] indices = new string[]{"SP_500", "FTSE_MIB", "GOLD_SPOT", "MSCI_EM", "MSCI_EURO", "All_Bonds", "US_Treasury"};
                 
                 if (indices.Contains(attribute)) {
@@ -37,7 +37,6 @@ namespace SsdWebApi
                 }
 
                 string[] lines = list.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
-                Console.WriteLine("result"+lines);
                 string strBitmaps = "[";
                 foreach (string s in lines)
                 {
@@ -76,5 +75,3 @@ namespace SsdWebApi
         } 
     }
 }
-
-

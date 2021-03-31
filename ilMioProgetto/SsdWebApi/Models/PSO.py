@@ -1,29 +1,29 @@
 import numpy as np
 import random as rnd
-from fitnessPSO import compute_fitness
-
+#from fitnessPSO import compute_fitness
+from fitnessPSOo import compute_fitness
 class Particle:
     def __init__(self,_ndim, nhood_size):
         self.fit = self.return_value = self.devst = self.fitnbest = self.fitbest = self.return_valuebest = self.devstbest = 0
         self.v = np.zeros(_ndim, dtype=np.float)
         self.x = np.zeros(_ndim, dtype=np.float)
-        self.xbest = np.zeros(_ndim, dtype=np.float)#local best
-        self.nxbest = np.zeros(_ndim, dtype=np.float)#global best
+        self.xbest = np.zeros(_ndim, dtype=np.float) #personal best
+        self.nxbest = np.zeros(_ndim, dtype=np.float) #gbest best
         self.nset = np.zeros(nhood_size, dtype=np.int)
         
 class ParSwarmOpt:
     def __init__(self,_xmin,_xmax):
-        #velocity coefficient 
+        # coefficient(initial velocity, c1, c2)
         self.w = 0.25
-        self.c1 = 1.7
-        self.c2 = 2.0
+        self.c1 = 1.496180
+        self.c2 = 1.806180 # Scaling co-efficient on the social component
         self.fitbest = np.inf
         self.return_valuebest = np.inf
         self.devstbest = np.inf
         self.xmin = _xmin
         self.xmax = _xmax
         
-    def pso_solve(self, popsize, numvar, niter, nhood_size, portfolioInitialValue, horizon, valoriDiforcast):
+    def pso_solve(self, popsize, numvar, niter, nhood_size, capital_value, horizon, forcastValues):
         rnd.seed(550)
         self.xsolbest = np.zeros(numvar, dtype=np.float)
         #---------------inizialize popolazione 
@@ -42,7 +42,7 @@ class ParSwarmOpt:
                 pop[i].nxbest = pop[i].x
                 
             # initialize  global and local fitness
-            pop[i].fit, pop[i].return_value, pop[i].devst = compute_fitness(pop[i].x, portfolioInitialValue, horizon, valoriDiforcast)
+            pop[i].fit, pop[i].return_value, pop[i].devst = compute_fitness(pop[i].x, capital_value, horizon, forcastValues)
             pop[i].fitbest = pop[i].fit
             pop[i].return_valuebest = pop[i].return_value
             pop[i].devstbest = pop[i].devst
@@ -54,9 +54,10 @@ class ParSwarmOpt:
                     id = rnd.randrange(popsize)
                 else:
                     pop[i].nset[j] = id;
+                    
         #-------------------------------------------run the code niter volte
         for iter in range(niter):
-            print("iteration  {0} zub {1}".format(iter, self.fitbest))
+            print("----------------iteration  {0} zub {1}".format(iter, self.fitbest))
             # update all particle (una per volta)
             for i in range(popsize):
                 # for each dimension
@@ -93,7 +94,7 @@ class ParSwarmOpt:
                             pop[i].x[max_index] -= diff
                         
                 # update particle fitness
-                pop[i].fit, pop[i].return_value, pop[i].devst = compute_fitness(pop[i].x, portfolioInitialValue, horizon, valoriDiforcast)
+                pop[i].fit, pop[i].return_value, pop[i].devst = compute_fitness(pop[i].x, capital_value, horizon, forcastValues)
                 
                 #update personal best position, min
                 if (pop[i].fit < pop[i].fitbest):
